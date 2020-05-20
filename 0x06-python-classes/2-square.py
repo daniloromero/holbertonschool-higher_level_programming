@@ -1,7 +1,9 @@
 #!/usr/bin/python3
+"""class square  """
+
+
 class Square:
-    """class square
-        Private instance attribute: size"""
+    """Private instance attribute: size"""
     def __init__(self, size=0):
 
         if type(size) != int:
