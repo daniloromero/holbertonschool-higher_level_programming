@@ -57,6 +57,6 @@ class Rectangle:
         else:
             for i in range(self.__height):
                 rectgl += "{}".format('#' * self.__width)
-                if i != (self.__width - 1):
+                if i != (self.__height- 1):
                     rectgl += "\n"
         return rectgl
