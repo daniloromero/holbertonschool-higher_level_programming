@@ -9,7 +9,7 @@ class Rectangle:
         self.height = height
 
     @property
-    def height(self, value):
+    def height(self):
         """ Private attribute getter """
         return self.__height
 
