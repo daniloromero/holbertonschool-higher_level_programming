@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Method that returns attributes and methods form an object"""
 
 
 def lookup(obj):
