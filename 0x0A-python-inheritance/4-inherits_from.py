@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Verifies instance"""
 
 
 def inherits_from(obj, a_class):
