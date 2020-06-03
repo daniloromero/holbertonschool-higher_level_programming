@@ -1,4 +1,5 @@
 #!/usr/bin/python3
+"""Reads n lines form text file """
 
 
 def read_lines(filename="", nb_lines=0):
