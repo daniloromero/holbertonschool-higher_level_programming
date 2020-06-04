@@ -5,7 +5,6 @@
 class Student:
     """class Student"""
 
-
     def __init__(self, first_name, last_name, age):
         """ Constructor method"""
         self.first_name = first_name
@@ -19,4 +18,4 @@ class Student:
             dic = {j: self.__dict__[j] for j in attrs if j in self.__dict__}
             return dic
         else:
-                return self.__dict__
+            return self.__dict__
