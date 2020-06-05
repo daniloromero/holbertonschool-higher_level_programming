@@ -1,0 +1,76 @@
+====================================
+ MyList class Doctest
+====================================
+
+
+``MyList(list)`` is a class that inherits from list with
+Public instance method: def print_sorted(self): that prints the list,
+but sorted (ascending sort)
+
+You can assume that all the elements of the list will be of type int
+
+
+Import function
+=================
+
+    >>> MyList = __import__('1-my_list').MyList
+
+Create instance
+==================
+
+With argument positive int
+
+    >>> my_list = MyList(6)
+    Traceback (most recent call last):
+    ...
+    TypeError: 'int' object is not iterable
+
+With argument negative int
+
+    >>> my_list = MyList(-6)
+    Traceback (most recent call last):
+    ...
+    TypeError: 'int' object is not iterable
+
+More than 1 argument
+
+    >>> my_list = MyList(6, 2)
+    Traceback (most recent call last):
+    ...
+    TypeError: list() takes at most 1 argument (2 given)
+
+
+Without argument
+
+    >>> my_list = MyList()
+
+
+Check Type and instance
+==========================
+
+Type
+
+    >>> type(my_list) == MyList
+    True
+
+    >>> type(my_list) == list
+    False
+
+
+Instance
+
+    >>> isinstance(my_list, MyList)
+    True
+
+    >>> isinstance(my_list, list)
+    True
+
+Subclass
+
+    >>> issubclass(MyList, list)
+    True
+
+Method
+
+   >>> type(my_list.print_sorted)
+   <class 'method'>
