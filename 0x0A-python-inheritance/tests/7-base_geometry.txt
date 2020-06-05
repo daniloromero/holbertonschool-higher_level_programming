@@ -1,0 +1,58 @@
+====================================
+  BaseGeometry class Doctest
+====================================
+
+``BaseGeometry`` is a class with:
+
+Public instance method: def area(self): that raises an Exception
+with the message area() is not implemented
+
+Public instance method: def integer_validator(self, name, value):
+that validates value
+
+Import function
+=================
+
+    >>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
+Create instance
+==================
+
+With argument
+
+    >>> bg = BaseGeometry(5)
+    Traceback (most recent call last):
+    ...
+    TypeError: object() takes no parameters
+
+Without argument
+
+    >>> bg = BaseGeometry()
+
+
+Check Type and instance
+==========================
+
+Type
+
+    >>> type(bg) == BaseGeometry
+    True
+
+Instance
+
+    >>> isinstance(bg, BaseGeometry)
+    True
+
+Subclass
+
+    >>> issubclass(type(bg), BaseGeometry)
+    True
+
+Method
+
+   >>> type(bg.area)
+   <class 'method'>
+
+
+   >>> type(bg.integer_validator)
+   <class 'method'>
