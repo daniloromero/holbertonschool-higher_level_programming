@@ -1,0 +1,37 @@
+# ===============================================
+# 101-lazy_matrix_mul unittest
+# ===============================================
+
+
+import module:
+       >>> lazy_matrix_mul = __import__('101-lazy_matrix_mul').lazy_matrix_mul
+
+No arguments:
+       >>> lazy_matrix_mul()
+       Traceback (most recent call last):
+       TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+Simple case:
+       >>> l1 = [[1, 2], [3, 4]]
+       >>> l2 = [[5, 6], [7, 8]]
+       >>> lazy_matrix_mul(l1, l2)
+       [[19, 22], [43, 50]]
+
+No arguments:
+       >>> lazy_matrix_mul()
+       Traceback (most recent call last):
+       TypeError: lazy_matrix_mul() missing 2 required positional arguments: 'm_a' and 'm_b'
+
+Only first argument:
+       >>> l1 = [1, 2, 3]
+       >>> lazy_matrix_mul(l1)
+       Traceback (most recent call last):
+       TypeError: lazy_matrix_mul() missing 1 required positional argument: 'm_b'
+
+Three arguments:
+       >>> l1 = [1, 2, 3]
+       >>> l2 = [1, 2, 3]
+       >>> l3 = [1, 2, 3]
+       >>> lazy_matrix_mul(l1, l2, l3)
+       Traceback (most recent call last):
+       TypeError:lazy_matrix_mul() takes 2 positional arguments but 3 were given
