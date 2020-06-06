@@ -14,10 +14,6 @@ Lorem ipsum:
        <BLANKLINE>
        adipiscing elit
 
-Only Separtator without:
-       >>> text_indentation("?")
-       ?
-
 No argument:
        >>> text_indentation()
        Traceback (most recent call last):
