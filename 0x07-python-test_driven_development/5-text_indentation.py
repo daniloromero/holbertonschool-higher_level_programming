@@ -14,12 +14,12 @@ def text_indentation(text):
     aux = 1
     for char in text:
         if aux == 0:
-            if  char == ' ':
+            if char == ' ':
                 char = ''
                 aux = 1
         if char in breakpoint:
             new_text += char + "\n\n"
             aux = 0
         else:
-             new_text += char
+            new_text += char
     print(new_text)

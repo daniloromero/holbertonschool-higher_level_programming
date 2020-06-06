@@ -3,7 +3,7 @@
 
 
 def matrix_divided(matrix, div):
-    """ function that divides all elements of a matrix 
+    """ function that divides all elements of a matrix
     Arguments:
 
     matrix: must be a list of lists of integers or floats
@@ -27,7 +27,7 @@ def matrix_divided(matrix, div):
 
     checklen = [len(i) for i in matrix]
     if len(set(checklen)) != 1:
-            raise TypeError('Each row of the matrix must have the same size')
+        raise TypeError('Each row of the matrix must have the same size')
 
     if type(div) not in [int, float]:
         raise TypeError("div must be a number")
