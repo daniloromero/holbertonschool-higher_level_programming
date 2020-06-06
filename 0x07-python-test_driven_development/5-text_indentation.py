@@ -26,4 +26,4 @@ def text_indentation(text):
             else:
                 new_text += char
                 aux = 0
-    print(new_text,end='')
+    print(new_text, end='')
