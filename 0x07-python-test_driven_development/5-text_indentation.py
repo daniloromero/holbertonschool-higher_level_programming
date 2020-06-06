@@ -11,15 +11,19 @@ def text_indentation(text):
         raise TypeError('text must be a string')
     new_text = ""
     breakpoint = ['.', '?', ':']
-    aux = 1
+    aux = 0
+    if text[0] == ' ':
+        aux = 1
     for char in text:
-        if aux == 0:
-            if char == ' ':
-                char = ''
-                aux = 1
         if char in breakpoint:
             new_text += char + "\n\n"
-            aux = 0
+            aux = 1
         else:
-            new_text += char
+            if aux == 0:
+                new_text += char
+            elif aux == 1 and char == ' ':
+                continue
+            else:
+                new_text += char
+                aux =0
     print(new_text)
