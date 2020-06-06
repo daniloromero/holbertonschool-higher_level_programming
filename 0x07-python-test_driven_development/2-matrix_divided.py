@@ -15,15 +15,14 @@ def matrix_divided(matrix, div):
 
     Raise TypeError or ZeroDivisionError when needed
     """
+    errmsg = 'matrix must be a matrix (list of lists) of integers/floats'
     if type(matrix) != list:
-        raise TypeError('matrix must be a matrix (list of lists) of \
-                            integers/floats')
+        raise TypeError(errmsg)
 
     for i in matrix:
         for j in i:
             if type(j) not in [int, float]:
-                raise TypeError("matrix must be a matrix (list of lists) of  \
-                            integers/floats")
+                raise TypeError(errmsg)
 
     checklen = [len(i) for i in matrix]
     if len(set(checklen)) != 1:
