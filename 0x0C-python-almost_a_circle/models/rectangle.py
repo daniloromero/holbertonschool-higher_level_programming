@@ -5,6 +5,7 @@ from models.base import Base
 
 class Rectangle(Base):
     """Class rectangle"""
+
     def __init__(self, width, height, x=0, y=0, id=None):
         """Constructor"""
         self.width = width
@@ -52,7 +53,7 @@ class Rectangle(Base):
         if type(value) != int:
             raise TypeError('x must be an integer')
         if value < 0:
-            raise ValueError('x must be > 0')
+            raise ValueError('x must be >= 0')
         self.__x = value
 
     @property
@@ -66,7 +67,7 @@ class Rectangle(Base):
         if type(value) != int:
             raise TypeError('y must be an integer')
         if value < 0:
-            raise ValueError('y must be > 0')
+            raise ValueError('y must be >= 0')
         self.__y = value
 
     def area(self):
