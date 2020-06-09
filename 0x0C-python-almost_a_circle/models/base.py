@@ -51,11 +51,10 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """ returns an instance with all attributes already set """
-        if len(dictionary) == 0:
-            return
-        dummy = cls(1, 1)
-        cls.update(dummy, **dictionary)
-        return dummy
+        if dictionary != None and len(dictionary) != 0:
+            dummy = cls(1, 1)
+            cls.update(dummy, **dictionary)
+            return dummy
 
     @classmethod
     def load_from_file(cls):
