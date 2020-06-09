@@ -53,7 +53,7 @@ class Base:
         """ returns an instance with all attributes already set """
         if dictionary is not None and len(dictionary) != 0:
             dummy = cls(1, 1)
-            cls.update(dummy, **dictionary)
+            dummy.update(**dictionary)
             return dummy
 
     @classmethod
