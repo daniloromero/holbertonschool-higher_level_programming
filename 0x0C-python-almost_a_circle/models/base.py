@@ -51,6 +51,8 @@ class Base:
     @classmethod
     def create(cls, **dictionary):
         """ returns an instance with all attributes already set """
+        if len(dictionary) == 0:
+            return
         dummy = cls(1, 1)
         cls.update(dummy, **dictionary)
         return dummy
