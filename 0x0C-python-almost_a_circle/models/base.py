@@ -87,3 +87,24 @@ class Base:
             writer = csv.DictWriter(csvfile, fieldnames=fields)
             writer.writeheader()
             writer.writerows(csvstr)
+
+    @classmethod
+    def load_from_file_csv(cls):
+        """ returns a deserialized list of instances from csv file"""
+        filename = cls.__name__ + ".csv"
+        list3 = []
+        if os.path.isfile(filename):
+            with open(filename, newline='') as csvfile:
+                reader = csv.reader(csvfile, delimiter=',')
+                if cls.__name__ == 'Rectangle':
+                    fields = ['id', 'width', 'height', 'x', 'y']
+                if cls.__name__ == 'Square':
+                    fields = ['id', 'size', 'x', 'y']
+                for i, row in enumerate(reader):
+                    if i > 0:
+                        obj = cls(1, 1)
+                        for j, k in enumerate(row):
+                            if k:
+                                setattr(obj, fields[j], int(k))
+                        list3.append(obj)
+        return list3
