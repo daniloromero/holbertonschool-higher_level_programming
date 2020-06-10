@@ -54,7 +54,7 @@ class Base:
         if dictionary is not None and len(dictionary) != 0:
             if cls == 'Rectangle':
                 dummy = cls(1, 1)
-            elif cls == 'Square':
+            if cls == 'Square':
                 dummy = cls(1)
             dummy.update(**dictionary)
             return dummy
