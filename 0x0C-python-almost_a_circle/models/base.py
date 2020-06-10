@@ -52,9 +52,9 @@ class Base:
     def create(cls, **dictionary):
         """ returns an instance with all attributes already set """
         if dictionary is not None and len(dictionary) != 0:
-            if cls == 'Rectangle':
+            if cls.__name__ == 'Rectangle':
                 dummy = cls(1, 1)
-            if cls == 'Square':
+            if cls.__name__ == 'Square':
                 dummy = cls(1)
             dummy.update(**dictionary)
             return dummy
