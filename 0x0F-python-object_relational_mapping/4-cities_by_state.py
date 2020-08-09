@@ -17,7 +17,7 @@ if __name__ == '__main__':
     JOIN states ON cities.state_id = states.id
     ORDER BY cities.id ASC;
     """
-    c.execute(query, (stateq, ))
+    c.execute(query, )
     rows = c.fetchall()
     for row in rows:
         print(row)
