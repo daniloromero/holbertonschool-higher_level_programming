@@ -13,6 +13,7 @@ if __name__ == '__main__':
                          passwd=password, db=db_name)
     c = db.cursor()
     c.execute("SELECT states.id, name FROM states WHERE name='{:s}' "
+              "COLLATE latin1_general_cs "
               "ORDER BY states.id ASC;".format(stateq))
     rows = c.fetchall()
     for row in rows:
