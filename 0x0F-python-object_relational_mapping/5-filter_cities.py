@@ -24,7 +24,7 @@ if __name__ == '__main__':
     rows = [i[0] for i in rows]
     cities = ""
     for row in rows[:-1]:
-         print(row +',', end='')
+        print(row + ',', end='')
     else:
         print(str(rows[-1:]))
     c.close()
