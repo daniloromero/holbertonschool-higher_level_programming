@@ -21,11 +21,8 @@ if __name__ == '__main__':
     """
     c.execute(query, (stateq, ))
     rows = c.fetchall()
-    rows = [i[0] for i in rows]
-    cities = ""
     for row in rows[:-1]:
-        print(row + ',', end='')
-    else:
-        print(str(rows[-1:]))
+        print(str(row[0]) + ', ', end='')
+    print(str(rows[-1][0]))
     c.close()
     db.close()
