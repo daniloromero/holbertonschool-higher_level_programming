@@ -15,11 +15,11 @@ if __name__ == '__main__':
     query = """
     SELECT cities.name
     FROM cities
-    JOIN states ON cities.state_id = states.id
-    WHERE BYNARY states.name=%s
+    INNER JOIN states ON cities.state_id = states.id
+    WHERE BINARY states.name LIKE '{}'
     ORDER BY cities.id ASC;
-    """
-    c.execute(query, (stateq, ))
+    """.format(stateq)
+    c.execute(query)
     rows = c.fetchall()
     for row in rows[:-1]:
         print(str(row[0]) + ', ', end='')
