@@ -14,8 +14,8 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    result = session.query(State).filter(State.name.like('%a%')).all()
-    if result in not None:
+    result = session.query(State).filter(State.name.like("%a%")).all()
+    if result is not None:
         for each in result:
             session.delete(each)
     else:
