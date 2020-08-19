@@ -5,5 +5,5 @@
 def find_peak(list_of_integers):
     """Finds peak number"""
     if len(list_of_integers) != 0:
-        sortl = sorted(list_of_integers)
-        return (sortl[-1])
+        list_of_integers.sort()
+        return (list_of_integers[-1])
