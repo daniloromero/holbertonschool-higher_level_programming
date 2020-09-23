@@ -2,7 +2,7 @@
 const Rectang = require('./5-square');
 
 class Square extends Rectang {
-  charPrint(c) {
+  charPrint (c) {
     if (typeof (c) === 'undefined') {
       c = 'X';
     }
