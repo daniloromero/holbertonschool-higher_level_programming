@@ -1,7 +1,7 @@
 #!/usr/bin/node
-const myVar =  process.argv.slice(2);
+const myVar = process.argv.slice(2);
 if (isNaN(myVar[0])) {
-	console.log('Not a number');
+  console.log('Not a number');
 } else {
-	console.log(`My number: ${myVar[0]}`);
+  console.log(`My number: ${myVar[0]}`);
 }
