@@ -1,26 +1,26 @@
 #!/usr/bin/node
-class Rectangle  {
+class Rectangle {
   constructor (w, h) {
     if (w >= 1 && h >= 1) {
       this.width = w;
-  	  this.height = h;
+      this.height = h;
     }
   }
 
-
-print () {
-  const char = 'X';
-  for (let i = 0; i < this.height; i++) {
-    console.log(char.repeat(this.width))
+  print () {
+    const char = 'X';
+    for (let i = 0; i < this.height; i++) {
+      console.log(char.repeat(this.width));
+    }
   }
-}
-rotate () {
-  [this.width, this.height] = [this.height, this.width];
-}
 
-double () {
-  this.width *= 2;
-  this.height *= 2;
-}
+  rotate () {
+    [this.width, this.height] = [this.height, this.width];
+  }
+
+  double () {
+    this.width *= 2;
+    this.height *= 2;
+  }
 }
 module.exports = Rectangle;
