@@ -1,4 +1,4 @@
-#!/usr/bin.py_/python3
+#!/usr/bin/python3
 """ List all states in MYSQL database"""
 
 from sys import argv
