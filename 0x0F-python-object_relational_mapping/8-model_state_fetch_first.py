@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """lists all State objects from the database hbtn_0e_6_usa
 """
+
 import sys
 from model_state import Base, State
 from sqlalchemy import (create_engine)
@@ -12,7 +13,7 @@ if __name__ == "__main__":
 
     Session = sessionmaker(bind=engine)
     session = Session()
-    first =session.query(State).first()
+    first = session.query(State).first()
     if first:
         print("{}: {}".format(first.id, first.name))
     else:
