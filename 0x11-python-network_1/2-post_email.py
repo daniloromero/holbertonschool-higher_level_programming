@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""script a POST request with the email as a parameter""" 
+"""script a POST request with the email as a parameter"""
 import urllib.request
 import sys
 
