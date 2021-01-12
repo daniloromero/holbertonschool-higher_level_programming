@@ -11,7 +11,7 @@ if __name__ == '__main__':
     else:
         q = ""
     try:
-        r = requests.post(url, data)
+        r = requests.post(url, q)
         answer = r.json
         if answer:
             print('[{}] {}'.format(answer.id, answer.name))
