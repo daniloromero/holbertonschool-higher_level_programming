@@ -14,7 +14,7 @@ if __name__ == '__main__':
         r = requests.post(url, data)
         answer = r.json
         if answer:
-            print('[{}] {}'.format(answer.id, answer.name))
+            print('[{}] {}'.format(answer.get('id'), answer.get('name')))
         else:
             print('No result')
     except ValueError:
