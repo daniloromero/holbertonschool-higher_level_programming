@@ -1,6 +1,6 @@
 #/!usr/bin/python3
 """script takes in URL, sends request to URL, displays value of X-Request-Id"""
-import request
+import requests
 import sys
 
 
