@@ -7,7 +7,7 @@ import sys
 if __name__ == '__main__':
     url = ' https://api.github.com' 
     if len(sys.argv) > 1:
-        data = {'username': sys.argv[1]
+        data = {'username': sys.argv[1],
                 'password': sys.argv{2}}
     else:
         data = {'q': ""}
