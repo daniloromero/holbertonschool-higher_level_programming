@@ -14,8 +14,9 @@ if __name__ == '__main__':
     if answer:
         for i in answer[:10]:
             sha = i.get('sha')
-            author = i.get('author')
-            if sha:
-                print('{}: {}'.format(sha, author.get('login')))
+            commit = i.get('commit')
+            if commit:
+                committer = commit.get('commiter')
+            print('{}: {}'.format(sha, committer.get('name')))
     else:
         print('None')
