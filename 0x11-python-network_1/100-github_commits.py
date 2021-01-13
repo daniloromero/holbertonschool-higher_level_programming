@@ -16,7 +16,7 @@ if __name__ == '__main__':
             sha = i.get('sha')
             commit = i.get('commit')
             if commit:
-                committer = commit.get('commiter')
+                committer = commit.get('committer')
             print('{}: {}'.format(sha, committer.get('name')))
     else:
         print('None')
